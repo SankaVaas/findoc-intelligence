@@ -1,0 +1,18 @@
+# Layer 2: Embeddings + ChromaDB + Hybrid Search
+# Install after requirements-layer1.txt
+# Run: pip install -r requirements-layer2.txt
+
+# Embeddings (multilingual-e5-large runs on CPU)
+sentence-transformers>=3.0.0
+torch>=2.1.0
+transformers>=4.38.0
+huggingface-hub>=0.20.0
+
+# Vector store
+chromadb>=0.4.22
+
+# Lexical search (BM25)
+rank-bm25>=0.2.2
+
+# Chunking dependency (if not already installed)
+langchain-text-splitters>=0.3.8
