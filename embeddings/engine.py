@@ -66,13 +66,13 @@ class EmbeddingEngine:
             )
             logger.info(
                 "Embedding model ready. dim={}",
-                self._model.get_sentence_embedding_dimension()
+                self._model.get_embedding_dimension()
             )
         return self._model
 
     @property
     def dimension(self) -> int:
-        return self.model.get_sentence_embedding_dimension()
+        return self._model.get_embedding_dimension()
 
     # ── Public API ────────────────────────────────────────────────────────
 
