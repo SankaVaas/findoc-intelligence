@@ -215,9 +215,8 @@ def test_full_graph(tmp):
     )
 
     # Ingest
-    doc_file = make_test_doc(tmp / "docs")
     (tmp / "docs").mkdir(exist_ok=True)
-    doc_file = (tmp / "docs" / "acme_2023.txt")
+    doc_file = tmp / "docs" / "acme_2023.txt"
     doc_file.write_text(SAMPLE_DOC * 3)
 
     n = pipeline.ingest(doc_file)
